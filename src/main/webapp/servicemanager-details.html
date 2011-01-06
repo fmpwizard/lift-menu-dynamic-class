@@ -1,0 +1,44 @@
+<lift:surround with="default" at="content">
+  <div class="colborder ">
+    <hr class="space" />
+    <lift:ServiceManagerDetails.renderServiceManagerResult>
+      <h2>Agent results for version: </h2> 
+      <table>
+        <tr>
+          <th>Platform</th>
+          <th>Browser</th>
+          <th>Control Render</th>
+          <th>Graph Render</th>
+          <th>CG Works</th>
+          <th>No Errors</th>
+          <th>Installer available</th>
+          <th>Starts</th>
+          <th>CPU Usage</th>
+          <th>RAM Usage</th>
+          <th>QUAN help link</th>
+          <th>Smoke Test</th>
+          <th>Other tests</th>
+        </tr>
+  
+  
+        <tr id="row">
+          <td id="col">Windows XP</td>
+          <td class="clearable"> Browser </td>
+          <td class="clearable"> Control Render </td>
+          <td class="clearable"> Graph Render </td>
+          <td class="clearable"> CG Works </td>
+          <td class="clearable"> No Errors </td>
+          <td class="clearable"> Installer available </td>
+          <td class="clearable"> Starts </td>
+          <td class="clearable"> CPU Usage </td>
+          <td class="clearable"> RAM Usage </td>
+          <td class="clearable"> QUAN help link </td>
+          <td class="clearable"> Smoke Test </td>
+          <td class="clearable"> Other Tests </td>
+        </tr>
+  
+      </table>
+    </lift:ServiceManagerDetails.renderServiceManagerResult>
+  </div>
+</lift:surround>
+

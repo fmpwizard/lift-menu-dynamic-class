@@ -1,0 +1,42 @@
+package code
+package snippet
+
+import code.snippet.Param._
+
+import scala.xml.{NodeSeq, Text, Elem}
+
+import net.liftweb._
+import util._
+import common.Logger
+import http._
+import SHtml._
+import S._
+import js.JsCmds.{SetHtml, SetValueAndFocus}
+
+import Helpers._
+
+class TopMenu extends Logger {
+
+  /**
+    * Generate the Test Result view section
+    */
+
+  val showingVersion= agentVersionString openOr(
+                        overviewVersionString openOr(
+                          serviceManagerVersionString openOr("")
+                        )
+                      )
+
+  debug(showingVersion)
+  debug(S.uri)
+  
+
+  def addVersionToLinks ={
+    ClearClearable andThen
+    "a [href+]" #> Text("/" + showingVersion) 
+  }
+
+
+
+}
+
